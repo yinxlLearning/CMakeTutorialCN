@@ -1,3 +1,9 @@
 // the configured options and settings for Tutorial
 #define Tutorial_VERSION_MAJOR @Tutorial_VERSION_MAJOR@
 #define Tutorial_VERSION_MINOR @Tutorial_VERSION_MINOR@
+
+// 根据CMAKE配置时的条件，定义或者不定义 USE_MYMATH 宏
+// 当你在 CMake 配置文件中设置了 USE_MYMATH 变量时，
+// CMake 会在生成 TutorialConfig.h 文件时，将这行代码替换为 #define USE_MYMATH
+// 如果没有设置 USE_MYMATH 变量，这一行会被替换为空行
+#cmakedefine USE_MYMATH
